@@ -109,7 +109,7 @@ const CandidateLogin = () => {
                 marginBottom: "20px",
               }}
             >
-              Login
+              Candidate Login
             </Typography>
 
             <form>
@@ -175,7 +175,7 @@ const CandidateLogin = () => {
               />
 
               <Link
-                to="/hr-login"
+                to="/"
                 style={{ textDecoration: "none" }} // Removes underline
               >
                 <Typography
