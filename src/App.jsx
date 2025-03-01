@@ -1,14 +1,18 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 import "./App.css";
+import CandidateLogin from "./CandidateLogin";
+import HrLogin from "./HrLogin";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <h1>Employee Onboarding System</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/hr-login" element={<HrLogin />}></Route>
+          <Route path="/candidate-login" element={<CandidateLogin />}></Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
