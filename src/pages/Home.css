@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensures responsiveness */
+  padding: 50px 80px;
+  gap: 60px;
+  background-color: #ffffff;
+  min-height: 100vh;
+  position: relative;
+}
+
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.image-bg-strip {
+  position: absolute;
+  width: 80%;  /* Adjusted width to match the reference */
+  height: 90%;  /* Adjusted height */
+  background-color: #d8e0c4; /* Pista Green */
+  left: -50px;  /* Positioned similar to reference */
+  top: 30px;  /* Adjusted for better alignment */
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.responsive-picture {
+  display: block;
+  width: 100%;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.text-section {
+  flex: 1;
+  max-width: 500px;
+  text-align: left;
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.subheading {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+  margin: 25px 0;
+}
+
+.skills-list li {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.skills-list li span {
+  color: #111;
+  font-weight: 600;
+  margin-right: 12px;
+}
+
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.portfolio-btn,
+.cv-btn {
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.portfolio-btn {
+  background-color: #c6cf9b;
+  color: black;
+}
+
+.cv-btn {
+  background-color: white;
+  border: 2px solid black;
+}
+
+.portfolio-btn:hover,
+.cv-btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.85;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .home-container {
+    flex-direction: column;
+    padding: 40px;
+    text-align: center;
+  }
+
+  .image-section {
+    order: -1; /* Places the image above text */
+  }
+
+  .text-section {
+    max-width: 100%;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .subheading {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+
+  .image-bg-strip {
+    width: 85%;
+    height: 95%;
+    left: -40px;
+    top: 20px;
+  }
+}
